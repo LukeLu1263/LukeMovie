@@ -12,6 +12,7 @@
 #import "MoreViewController.h"
 #import "TopViewController.h"
 #import "NewsViewController.h"
+#import "BaseNavigationController.h"
 
 
 @interface MainViewController ()
@@ -25,7 +26,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.tabBar.hidden = YES;
     }
     return self;
 }
@@ -39,24 +40,60 @@
     [self customTabBarView];
 }
 
-
+#pragma mark - private
 - (void)customTabBarView
 {
-    _tabBarBG = [[UIImageView alloc] initWithFrame:CGRectMake(0, kDeviceHeight-49, kDeviceWidth, 49)];
-    _tabBarBG.image = [UIImage imageNamed:@"tab_bg_all"];
-    _tabBarBG.userInteractionEnabled = YES;
-    [self.view addSubview:_tabBarBG];
+    _tabBarBackground = [[UIImageView alloc] initWithFrame:CGRectMake(0, kDeviceHeight-49, kDeviceWidth, 49)];
+    _tabBarBackground.image = [UIImage imageNamed:@"tab_bg_all"];
+    _tabBarBackground.userInteractionEnabled = YES;
+    [self.view addSubview:_tabBarBackground];
     
-    _selectedImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, _tabBarBG.height/2.0-45.0/2, 50, 45)];
+    _selectedImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, _tabBarBackground.height/2.0-45.0/2, 50, 45)];
     _selectedImage.image = [UIImage imageNamed:@"selectTabbar_bg_all1"];
-    [_tabBarBG addSubview:_selectedImage];
+    [_tabBarBackground addSubview:_selectedImage];
+
+    NSArray *imgs = @[@"movie_home", @"msg_new",@"start_top250", @"movie_cinema", @"more_setting"];
+    NSArray *titles = @[@"电影", @"新闻", @"Top", @"影院", @"更多"];
     
+    int x = 0;
+    for (int i = 0; i<5; i++) {
+        UIImageView *itemView = [[UIImageView alloc] initWithFrame:CGRectMake(20+x, 10, 22, 22)];
+        itemView.tag = i;
+        itemView.contentMode = UIViewContentModeScaleAspectFit;
+        itemView.userInteractionEnabled = YES;
+        itemView.image = [UIImage imageNamed:imgs[i]];
+        [_tabBarBackground addSubview:itemView];
+        [itemView release];
+
+        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(itemView.left, itemView.bottom+2, itemView.width, 10)];
+        title.text = titles[i];
+        title.backgroundColor = [UIColor clearColor];
+        title.textColor = [UIColor whiteColor];
+        title.font = [UIFont boldSystemFontOfSize:10];
+        title.textAlignment = NSTextAlignmentCenter;
+        [_tabBarBackground addSubview:title];
+        [title release];
+
+        x += itemView.width+43;
+
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(test:)];
+        [itemView addGestureRecognizer:tap];
+        [tap release];
+    }
+}
+
+- (void)test:(UIGestureRecognizer *)tap
+{
+    UIView *view = [tap view];
+    [UIView beginAnimations:nil context:NULL];
+    _selectedImage.frame = CGRectMake(5 + 65 * view.tag, _tabBarBackground.height/2.0-45.0/2, 50, 45);
+    [UIView commitAnimations];
 }
 
 - (void)loadViewControllers
 {
     USAViewController *usaViewController = [[USAViewController alloc] init];
-    UINavigationController *usaNav = [[UINavigationController alloc] initWithRootViewController:usaViewController];
+    BaseNavigationController *usaNav = [[BaseNavigationController alloc] initWithRootViewController:usaViewController];
     [usaViewController release];
 
     //    // systemItem
@@ -65,19 +102,19 @@
     //    [usaItem release];
     
     NewsViewController *newsViewController = [[NewsViewController alloc] init];
-    UINavigationController *newsNav = [[UINavigationController alloc] initWithRootViewController:newsViewController];
+    BaseNavigationController *newsNav = [[BaseNavigationController alloc] initWithRootViewController:newsViewController];
     [newsViewController release];
     
     TopViewController *topViewController = [[TopViewController alloc] init];
-    UINavigationController *topNav = [[UINavigationController alloc] initWithRootViewController:topViewController];
+    BaseNavigationController *topNav = [[BaseNavigationController alloc] initWithRootViewController:topViewController];
     [topViewController release];
     
     CinemaViewController *cinemaViewController = [[CinemaViewController alloc] init];
-    UINavigationController *cinemaNav = [[UINavigationController alloc] initWithRootViewController:cinemaViewController];
+    BaseNavigationController *cinemaNav = [[BaseNavigationController alloc] initWithRootViewController:cinemaViewController];
     [cinemaViewController release];
     
     MoreViewController *moreViewController = [[MoreViewController alloc] init];
-    UINavigationController *moreNav = [[UINavigationController alloc] initWithRootViewController:moreViewController];
+    BaseNavigationController *moreNav = [[BaseNavigationController alloc] initWithRootViewController:moreViewController];
     [moreViewController release];
 
     
@@ -91,6 +128,7 @@
     [moreNav release];
 }
 
+#pragma mark - Memory
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -99,7 +137,7 @@
 
 - (void)dealloc
 {
-    [_tabBarBG release], _tabBarBG = nil;
+    [_tabBarBackground release], _tabBarBackground = nil;
     [_selectedImage release], _selectedImage = nil;
     [super dealloc];
 }

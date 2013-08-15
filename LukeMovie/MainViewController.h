@@ -11,7 +11,7 @@
 @interface MainViewController : UITabBarController
 {
     @private
-    UIImageView *_tabBarBG;
+    UIImageView *_tabBarBackground;
     UIImageView *_selectedImage;
 }
 @end
