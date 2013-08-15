@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UITabBarController
-
+{
+    @private
+    UIImageView *_tabBarBG;
+    UIImageView *_selectedImage;
+}
 @end

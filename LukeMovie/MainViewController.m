@@ -15,7 +15,8 @@
 
 
 @interface MainViewController ()
-
+- (void)loadViewControllers;
+- (void)customTabBarView;
 @end
 
 @implementation MainViewController
@@ -29,10 +30,27 @@
     return self;
 }
 
+#pragma mark - ViewController Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self loadViewControllers];
+    [self customTabBarView];
+}
+
+
+- (void)customTabBarView
+{
+    _tabBarBG = [[UIImageView alloc] initWithFrame:CGRectMake(0, kDeviceHeight-49, kDeviceWidth, 49)];
+    _tabBarBG.image = [UIImage imageNamed:@"tab_bg_all"];
+    _tabBarBG.userInteractionEnabled = YES;
+    [self.view addSubview:_tabBarBG];
+    
+    _selectedImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, _tabBarBG.height/2.0-45.0/2, 50, 45)];
+    _selectedImage.image = [UIImage imageNamed:@"selectTabbar_bg_all1"];
+    [_tabBarBG addSubview:_selectedImage];
+    
 }
 
 - (void)loadViewControllers
@@ -77,6 +95,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    [_tabBarBG release], _tabBarBG = nil;
+    [_selectedImage release], _selectedImage = nil;
+    [super dealloc];
 }
 
 @end

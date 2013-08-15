@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2718DD17BBC31200A65831 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2718DC17BBC31200A65831 /* BaseNavigationController.m */; };
 		3CAD482B17B4B0B800521B03 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD482A17B4B0B800521B03 /* NewsViewController.m */; };
 		3CAD482E17B4B0C600521B03 /* USAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD482D17B4B0C600521B03 /* USAViewController.m */; };
 		3CAD483117B4B0D200521B03 /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD483017B4B0D200521B03 /* CinemaViewController.m */; };
 		3CAD483417B4B0DB00521B03 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD483317B4B0DB00521B03 /* MoreViewController.m */; };
 		3CAD483717B4B0E500521B03 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD483617B4B0E500521B03 /* TopViewController.m */; };
+		3CCFD6F617BC92DD001CC650 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFD6F517BC92DD001CC650 /* UIViewExt.m */; };
 		3CD0162117B4983A004177D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD0162017B4983A004177D1 /* UIKit.framework */; };
 		3CD0162317B4983A004177D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD0162217B4983A004177D1 /* Foundation.framework */; };
 		3CD0162517B4983A004177D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD0162417B4983A004177D1 /* CoreGraphics.framework */; };
@@ -65,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2718DB17BBC31200A65831 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		3C2718DC17BBC31200A65831 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		3CAD482917B4B0B800521B03 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		3CAD482A17B4B0B800521B03 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		3CAD482C17B4B0C600521B03 /* USAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAViewController.h; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		3CAD483317B4B0DB00521B03 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		3CAD483517B4B0E400521B03 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
 		3CAD483617B4B0E500521B03 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		3CCFD6F417BC92DD001CC650 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		3CCFD6F517BC92DD001CC650 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		3CD0161D17B4983A004177D1 /* LukeMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LukeMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD0162017B4983A004177D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3CD0162217B4983A004177D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -191,6 +197,15 @@
 			name = News;
 			sourceTree = "<group>";
 		};
+		3CCFD6F217BC9298001CC650 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3CCFD6F417BC92DD001CC650 /* UIViewExt.h */,
+				3CCFD6F517BC92DD001CC650 /* UIViewExt.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		3CD0161417B4983A004177D1 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +245,8 @@
 				3CD0163017B4983A004177D1 /* AppDelegate.m */,
 				3CD0169A17B499FC004177D1 /* MainViewController.h */,
 				3CD0169B17B499FC004177D1 /* MainViewController.m */,
+				3C2718DB17BBC31200A65831 /* BaseNavigationController.h */,
+				3C2718DC17BBC31200A65831 /* BaseNavigationController.m */,
 				3CD0162717B4983A004177D1 /* Supporting Files */,
 			);
 			path = LukeMovie;
@@ -238,7 +255,8 @@
 		3CD0162717B4983A004177D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3CD0163D17B4986E004177D1 /* image */,
+				3CCFD6F217BC9298001CC650 /* Util */,
+				3CD0163D17B4986E004177D1 /* Image */,
 				3CD0162817B4983A004177D1 /* LukeMovie-Info.plist */,
 				3CD0162917B4983A004177D1 /* InfoPlist.strings */,
 				3CD0162C17B4983A004177D1 /* main.m */,
@@ -247,20 +265,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3CD0163D17B4986E004177D1 /* image */ = {
+		3CD0163D17B4986E004177D1 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				3CD0163E17B49901004177D1 /* 电影 */,
-				3CD0164517B49901004177D1 /* 更多页 */,
-				3CD0164B17B49901004177D1 /* 全局 */,
-				3CD0165A17B49901004177D1 /* 首页 */,
-				3CD0166717B49901004177D1 /* 新闻页 */,
+				3CD0163E17B49901004177D1 /* Movie */,
+				3CD0164517B49901004177D1 /* More */,
+				3CD0164B17B49901004177D1 /* Global */,
+				3CD0165A17B49901004177D1 /* Home */,
+				3CD0166717B49901004177D1 /* News */,
 				3CD0166C17B49901004177D1 /* top250 */,
 			);
-			name = image;
+			name = Image;
 			sourceTree = "<group>";
 		};
-		3CD0163E17B49901004177D1 /* 电影 */ = {
+		3CD0163E17B49901004177D1 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
 				3CD0163F17B49901004177D1 /* coming_cinema.png */,
@@ -270,10 +288,11 @@
 				3CD0164317B49901004177D1 /* movie_cinema.png */,
 				3CD0164417B49901004177D1 /* movie_cinema@2x.png */,
 			);
+			name = Movie;
 			path = "电影";
 			sourceTree = "<group>";
 		};
-		3CD0164517B49901004177D1 /* 更多页 */ = {
+		3CD0164517B49901004177D1 /* More */ = {
 			isa = PBXGroup;
 			children = (
 				3CD0164617B49901004177D1 /* more_select_setting.png */,
@@ -282,10 +301,11 @@
 				3CD0164917B49901004177D1 /* more_setting@2x.png */,
 				3CD0164A17B49901004177D1 /* moreView_setting.png */,
 			);
+			name = More;
 			path = "更多页";
 			sourceTree = "<group>";
 		};
-		3CD0164B17B49901004177D1 /* 全局 */ = {
+		3CD0164B17B49901004177D1 /* Global */ = {
 			isa = PBXGroup;
 			children = (
 				3CD0163217B4983A004177D1 /* Default.png */,
@@ -303,10 +323,11 @@
 				3CD0165817B49901004177D1 /* Thumbs.db */,
 				3CD0165917B49901004177D1 /* yellow@2x.png */,
 			);
+			name = Global;
 			path = "全局";
 			sourceTree = "<group>";
 		};
-		3CD0165A17B49901004177D1 /* 首页 */ = {
+		3CD0165A17B49901004177D1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				3CD0165B17B49901004177D1 /* exchange_bg_home@2x.png */,
@@ -322,10 +343,11 @@
 				3CD0166517B49901004177D1 /* poster_title_home.png */,
 				3CD0166617B49901004177D1 /* poster_title_home@2x.png */,
 			);
+			name = Home;
 			path = "首页";
 			sourceTree = "<group>";
 		};
-		3CD0166717B49901004177D1 /* 新闻页 */ = {
+		3CD0166717B49901004177D1 /* News */ = {
 			isa = PBXGroup;
 			children = (
 				3CD0166817B49901004177D1 /* msg_new.png */,
@@ -333,6 +355,7 @@
 				3CD0166A17B49901004177D1 /* msg_select_new.png */,
 				3CD0166B17B49901004177D1 /* msg_select_new@2x.png */,
 			);
+			name = News;
 			path = "新闻页";
 			sourceTree = "<group>";
 		};
@@ -458,6 +481,8 @@
 				3CAD483117B4B0D200521B03 /* CinemaViewController.m in Sources */,
 				3CAD483417B4B0DB00521B03 /* MoreViewController.m in Sources */,
 				3CAD483717B4B0E500521B03 /* TopViewController.m in Sources */,
+				3C2718DD17BBC31200A65831 /* BaseNavigationController.m in Sources */,
+				3CCFD6F617BC92DD001CC650 /* UIViewExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
