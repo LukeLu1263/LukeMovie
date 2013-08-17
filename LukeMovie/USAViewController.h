@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface USAViewController : UIViewController
-
+{
+@private
+    UITableView *_listView;
+    UIView      *_posterView;
+}
 @end

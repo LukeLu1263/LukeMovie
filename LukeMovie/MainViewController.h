@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItemView.h"
 
-@interface MainViewController : UITabBarController
+@interface MainViewController : UITabBarController<ItemViewDelegate>
 {
     @private
     UIImageView *_tabBarBackground;

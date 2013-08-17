@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C2718DD17BBC31200A65831 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2718DC17BBC31200A65831 /* BaseNavigationController.m */; };
+		3C3B093D17BEABB600FFAF7B /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3B093C17BEABB600FFAF7B /* ItemView.m */; };
+		3C6EF0A817BF6D670071421B /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EF0A717BF6D670071421B /* test.json */; };
+		3C6EF0AC17BF6F2A0071421B /* LLNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EF0AB17BF6F2A0071421B /* LLNetworkService.m */; };
+		3C6EF0AF17BF7ED90071421B /* NorthUSA.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EF0AE17BF7ED90071421B /* NorthUSA.json */; };
 		3CAD482B17B4B0B800521B03 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD482A17B4B0B800521B03 /* NewsViewController.m */; };
 		3CAD482E17B4B0C600521B03 /* USAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD482D17B4B0C600521B03 /* USAViewController.m */; };
 		3CAD483117B4B0D200521B03 /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD483017B4B0D200521B03 /* CinemaViewController.m */; };
@@ -69,6 +73,12 @@
 /* Begin PBXFileReference section */
 		3C2718DB17BBC31200A65831 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		3C2718DC17BBC31200A65831 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		3C3B093B17BEABB600FFAF7B /* ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemView.h; sourceTree = "<group>"; };
+		3C3B093C17BEABB600FFAF7B /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
+		3C6EF0A717BF6D670071421B /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		3C6EF0AA17BF6F2A0071421B /* LLNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLNetworkService.h; sourceTree = "<group>"; };
+		3C6EF0AB17BF6F2A0071421B /* LLNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLNetworkService.m; sourceTree = "<group>"; };
+		3C6EF0AE17BF7ED90071421B /* NorthUSA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NorthUSA.json; sourceTree = "<group>"; };
 		3CAD482917B4B0B800521B03 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		3CAD482A17B4B0B800521B03 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		3CAD482C17B4B0C600521B03 /* USAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAViewController.h; sourceTree = "<group>"; };
@@ -197,6 +207,31 @@
 			name = News;
 			sourceTree = "<group>";
 		};
+		3C6EF0A617BF6D320071421B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3C6EF0AE17BF7ED90071421B /* NorthUSA.json */,
+				3C6EF0A717BF6D670071421B /* test.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		3C6EF0A917BF6EDE0071421B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3C6EF0AA17BF6F2A0071421B /* LLNetworkService.h */,
+				3C6EF0AB17BF6F2A0071421B /* LLNetworkService.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		3C6EF0AD17BF736B0071421B /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OpenSource;
+			sourceTree = "<group>";
+		};
 		3CCFD6F217BC9298001CC650 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,16 +272,18 @@
 			isa = PBXGroup;
 			children = (
 				3C2621CF17B4A3C5001B3242 /* News */,
-				3C2621CD17B4A3AA001B3242 /* USA */,
 				3C2621CC17B4A3A3001B3242 /* Cinema */,
 				3C2621CB17B4A39C001B3242 /* More */,
 				3C2621C917B4A38D001B3242 /* Top */,
+				3C2621CD17B4A3AA001B3242 /* USA */,
 				3CD0162F17B4983A004177D1 /* AppDelegate.h */,
 				3CD0163017B4983A004177D1 /* AppDelegate.m */,
 				3CD0169A17B499FC004177D1 /* MainViewController.h */,
 				3CD0169B17B499FC004177D1 /* MainViewController.m */,
 				3C2718DB17BBC31200A65831 /* BaseNavigationController.h */,
 				3C2718DC17BBC31200A65831 /* BaseNavigationController.m */,
+				3C3B093B17BEABB600FFAF7B /* ItemView.h */,
+				3C3B093C17BEABB600FFAF7B /* ItemView.m */,
 				3CD0162717B4983A004177D1 /* Supporting Files */,
 			);
 			path = LukeMovie;
@@ -255,6 +292,9 @@
 		3CD0162717B4983A004177D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C6EF0AD17BF736B0071421B /* OpenSource */,
+				3C6EF0A917BF6EDE0071421B /* Network */,
+				3C6EF0A617BF6D320071421B /* Data */,
 				3CCFD6F217BC9298001CC650 /* Util */,
 				3CD0163D17B4986E004177D1 /* Image */,
 				3CD0162817B4983A004177D1 /* LukeMovie-Info.plist */,
@@ -463,6 +503,8 @@
 				3CD0169717B49901004177D1 /* msg_select_new@2x.png in Resources */,
 				3CD0169817B49901004177D1 /* star_top250@2x.png in Resources */,
 				3CD0169917B49901004177D1 /* start_top250.png in Resources */,
+				3C6EF0A817BF6D670071421B /* test.json in Resources */,
+				3C6EF0AF17BF7ED90071421B /* NorthUSA.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +525,8 @@
 				3CAD483717B4B0E500521B03 /* TopViewController.m in Sources */,
 				3C2718DD17BBC31200A65831 /* BaseNavigationController.m in Sources */,
 				3CCFD6F617BC92DD001CC650 /* UIViewExt.m in Sources */,
+				3C3B093D17BEABB600FFAF7B /* ItemView.m in Sources */,
+				3C6EF0AC17BF6F2A0071421B /* LLNetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
